@@ -5,18 +5,28 @@ import tkinter as TK
 
 
 window = TK.Tk()
-window.title("Python-GUI-Calculator")
-
-
+window.title("PyVoca")
 window.resizable(False, False)
-
-window .title("Tk Example")
 window .configure(background="white")
 window .geometry("700x800")
 
+language_options = [
+    "Select source language",
+    "Englisch",
+    "Spain",
+    "German",
+    "France"
+    ]
 
-def show():
-    label.config(text=f"Selected: {listbox.get(ACTIVE)}")
+clicked = TK.StringVar()
+clicked.set("Select source language")
+
+drop1 = TK.OptionMenu(window, clicked, *language_options)
+drop1.pack()
+
+
+
+
 
 window.mainloop()
 
