@@ -11,7 +11,6 @@ window .configure(background="white")
 window .geometry("700x800")
 
 language_options = [
-    "Select source language",
     "Englisch",
     "Spain",
     "German",
@@ -21,7 +20,10 @@ language_options = [
 clicked = TK.StringVar()
 clicked.set("Select source language")
 
-drop1 = TK.OptionMenu(window, clicked, *language_options)
+drop1 = TK.OptionMenu(window, clicked,"Select source language", *language_options)
+drop1.pack()
+
+drop2 = TK.OptionMenu(window, clicked,"Select target language", *language_options)
 drop1.pack()
 
 

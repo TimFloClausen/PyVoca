@@ -57,4 +57,6 @@ PyVoca is currently in development. Features will be implemented step by step.
 
 ## Sources / Tutorials Used
 
-*To be added as development progresses.*
+[Pythontutorial - Tkinter-Window](https://www.pythontutorial.net/tkinter/tkinter-window/)
+
+[John Elder - Menus With TKinter - Python Tkinter GUI Tutorial #18](https://www.pythontutorial.net/tkinter/tkinter-window/)
