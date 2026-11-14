@@ -32,7 +32,7 @@ PyVoca is currently in development. Features will be implemented step by step.
 ## Planned Features
 
 ### GUI Development
-- [ ] Create the main Tkinter window
+- [x] Create the main Tkinter window
 - [ ] Add a text input area
 - [ ] Add a translation button
 - [ ] Complete the basic GUI layout

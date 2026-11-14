@@ -1,4 +1,24 @@
 from googletrans import Translator
+import tkinter as TK
+
+
+
+
+window = TK.Tk()
+window.title("Python-GUI-Calculator")
+
+
+window.resizable(False, False)
+
+window .title("Tk Example")
+window .configure(background="white")
+window .geometry("700x800")
+
+
+def show():
+    label.config(text=f"Selected: {listbox.get(ACTIVE)}")
+
+window.mainloop()
 
 # Translator initialisieren
 translator = Translator()
