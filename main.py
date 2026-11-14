@@ -7,36 +7,40 @@ import tkinter as TK
 window = TK.Tk()
 window.title("PyVoca")
 window.resizable(False, False)
-window .configure(background="#363636")
+window .configure(background="#878787")
 window .geometry("700x800")
 
     
 language_options_1 = [
-    "Select source language",
-    "Englisch",
-    "Spain",
-    "German",
-    "France"
+    "Select language",
+    "to English",
+    "to Spainish",
+    "to German",
+    "to France"
     ]
 clicked1 = TK.StringVar()
-clicked1.set("Select source language")
+clicked1.set("Select language")
 
 
 language_options_2 = [
 
     
     
-    "Select target language",
-    "Englisch",
-    "Spain",
-    "German",
-    "France"
+    "Select language",
+    "to English",
+    "to Spainish",
+    "to German",
+    "to France"
     ]
 
 clicked2 = TK.StringVar()
-clicked2.set("Select ctarget language")
+clicked2.set("Select languagee")
 
-Text_input = TK.Text(window, bg = "#878787", fg = "black", height = 10, width = 10, font = "Ariel")
+button_translate = TK.Button(window, text="Translate")
+button_file = TK.Button(window, text="Cards")
+
+Text_input = TK.Text(window, bg = "#FFFFFF", fg = "#878787", height = 30, width = 20, font = "Ariel")
+Text_output = TK.Text(window, bg = "#FFFFFF", fg = "#878787", height = 30, width = 20, font = "Ariel")
 
 window.columnconfigure(0, weight = 1)
 window.columnconfigure(1, weight = 1)
@@ -53,7 +57,13 @@ drop2 = TK.OptionMenu(window, clicked2, *language_options_2)
 
 drop2.grid(row = 0, column = 2)
 
-Text_input.grid(row = 2, column = 0)
+Text_input.grid(row = 1, column = 0)
+
+Text_output.grid(row = 1, column = 2)
+
+button_translate.grid(row = 0, column = 1)
+button_file.grid(row = 1, column = 1)
+
 
 
 

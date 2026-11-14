@@ -63,3 +63,9 @@ PyVoca is currently in development. Features will be implemented step by step.
 
 [Atlas - An overview of tkinter layouts](https://www.youtube.com/watch?v=i577cFu8eBI)
 
+[Geeksforgeeks - Python Tkinter - Text Widget](https://www.geeksforgeeks.org/python/python-tkinter-text-widget/)
+
+[Pythonguis - Create Buttons in Tkinter](https://www.pythonguis.com/tutorials/create-buttons-in-tkinter/)
+
+
+
