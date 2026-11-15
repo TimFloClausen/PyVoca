@@ -53,3 +53,5 @@ Here are some of the sources and tutorials I used for this project:
 [Pythonguis - Create Buttons in Tkinter](https://www.pythonguis.com/tutorials/create-buttons-in-tkinter/)
 
 [Deep translator’s Documentation](https://deep-translator.readthedocs.io/en/latest/)
+
+[Geeksforgeeks - Python Tkinter - MessageBox Widget](https://www.geeksforgeeks.org/python/python-tkinter-messagebox-widget/)

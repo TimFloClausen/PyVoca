@@ -1,5 +1,6 @@
 from deep_translator import MyMemoryTranslator
 import tkinter as TK
+from tkinter.messagebox import *
 import asyncio
 
 
@@ -9,6 +10,8 @@ window = TK.Tk()
 window.title("PyVoca")
 window.resizable(False, False)
 window .configure(background="#17191F")
+icon = TK.PhotoImage(file="icon.png")
+window.iconphoto(True, icon)
 window .geometry("1200x800")
 
 
@@ -39,6 +42,8 @@ def get_txt():
     with open("Output.txt", "w", encoding="utf-8") as text_file:
         for i in range(len(original_text)):
             text_file.write(f"{original_text[i]}\t{translated_text[i]}\n")
+
+    print(showinfo("Info", "Your vocabulary was successfully exported!"))
 
 def get_tutorial():
     

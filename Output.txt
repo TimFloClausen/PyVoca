@@ -1,0 +1,6 @@
+hallo	bonjour
+der Baum	l’arbre
+ich essen	je mange
+ich ass	je mangeai
+ich habe gegessen	j’ai mangé
+ich werde gegessen haben	j’aurai mangé
