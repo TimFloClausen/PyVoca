@@ -94,6 +94,20 @@ def language_Selecttions1():
         elif clicked1.get() == "From French":
                 source = "french"
                 return source
+        elif clicked1.get() == "From Italian":
+                source = "italian"
+                return source
+        elif clicked1.get() == "From Japanese":
+                source = "japanese"
+                return source
+        elif clicked1.get() == "From Latin":
+                source = "latin"
+                return source
+
+
+
+        
+            
     else: 
         source = "empty"
         return source
@@ -110,11 +124,20 @@ def language_Selecttions2():
             target = "spanish"
             return target
         elif clicked2.get() == "to German":
-                target = "german"
-                return target
+            target = "german"
+            return target
         elif clicked2.get() == "to French":
-                target = "french"
-                return target
+            target = "french"
+            return target
+        elif clicked2.get() == "to Italian":
+            target = "italian"
+            return target
+        elif clicked2.get() == "to Japanese":
+            target = "japanese"
+            return target
+        elif clicked2.get() == "to Latin":
+            target = "latin"
+            return target
     else:
         target = "empty"
         return target
@@ -127,22 +150,25 @@ language_options_1 = [
     "From English",
     "From Spanish",
     "From German",
-    "From French"
+    "From French",
+    "From Italian",
+    "From Japanese",
+    "From Latin"
     ]
 clicked1 = TK.StringVar()
 clicked1.set("Select language")
 
 
 language_options_2 = [
-
-    
-    
     "Select language",
     "to English",
     "to Spanish",
     "to German",
-    "to French"               
-    ]
+    "to French",
+    "to Italian",
+    "to Japanese",
+    "to Latin"
+]
 
 clicked2 = TK.StringVar()
 clicked2.set("Select language")
