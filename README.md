@@ -6,58 +6,41 @@ A Python application that translates words, creates vocabulary lists, and export
 
 The goal of this project is to create a simple and easy-to-use vocabulary application with a graphical user interface (GUI).
 
-PyVoca will allow users to enter words, translate them into another language, and organize them into vocabulary lists.
+PyVoca allows users to enter words, translate them into another language, and organize them into vocabulary lists.
 
-The application will be designed to make creating vocabulary lists easier and faster.
+The application is designed to make creating vocabulary lists easier and faster.
 
 ## Goal
 
-The main goal is to develop a Python GUI application while learning more about API integration, data handling, and graphical user interfaces.
+The main goal was to develop a Python GUI application while learning more about API integration, data handling, and graphical user interfaces.
 
-I want to write as much of the code myself as possible instead of relying on existing libraries for the main functionality.
+I only had about a weekend to complete the application because I wanted to present the project on Monday at a job interview (apprenticeship).
+
+I wanted to write as much of the code myself as possible instead of relying on tutorials and AI.
 
 ## Status
 
-🚧 **In development**
+🚀 **Finished!**
 
-PyVoca is currently in development. Features will be implemented step by step.
+PyVoca is finished and fully usable! Built in just two days over a weekend.
 
 ## Technologies
 
 - Python
 - Tkinter (GUI)
-- Googletrans (for translation)
+- MyMemoryTranslator (for translation)
 - Git / GitHub
 
-## Planned Features
+# Features
 
-### GUI Development
-- [x] Create the main Tkinter window
-- [x] Add a text input area
-- [x] Add a translation button
-- [x] Complete the basic GUI layout
-
-### Vocabulary Management
-- [x] Add new words
-- [x] Edit existing words and translations
-- [x] Delete words
-- [x] Organize words into vocabulary lists
-- [x] Select source and target languages
-
-### Translation
-- [x] Translate individual words using MyMemoryTranslator
-- [x] Translate multiple words at once
-- [x] Display translations in the application
-- [x] Allow users to manually edit translations
-- [x] Handle errors and invalid requests
-
-### Export
-- [x] Export vocabulary lists as `.txt` files
-- [x] Make exports compatible with Quizlet's import format
+- 🌍 **Word & Sentence Translation:** Easily translate individual words or full sentences between different languages.
+- ✏️ **Manual Editing:** Review and tweak translations directly in the app before saving or exporting.
+- 💾 **Quizlet Export:** Save your vocabulary lists as a `.txt` file that is perfectly formatted for direct importing into Quizlet.
+- 🖥️ **Simple Interface:** A simple, user-friendly design featuring language selection, an in-app tutorial, and quick management tools.
 
 ## Sources / Tutorials Used
 
-### Here are some of the sources and tutorials I used for this project:**
+Here are some of the sources and tutorials I used for this project:
 
 [Pythontutorial - Tkinter-Window](https://www.pythontutorial.net/tkinter/tkinter-window/)
 
@@ -70,6 +53,3 @@ PyVoca is currently in development. Features will be implemented step by step.
 [Pythonguis - Create Buttons in Tkinter](https://www.pythonguis.com/tutorials/create-buttons-in-tkinter/)
 
 [Deep translator’s Documentation](https://deep-translator.readthedocs.io/en/latest/)
-
-
-

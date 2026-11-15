@@ -177,20 +177,20 @@ frame = TK.Frame(window, bg= "#17191F", width=200, height=500, bd=3,)
 frame.grid(row = 1, column = 1)
 
 button_translate = TK.Button(frame, bg = "#6385F5", height = 3, width = 7,
-                            text="Translate", font = "Segoe",
+                            text="Translate", font = "Helvetica",
                             command = lambda: asyncio.run(Take_input()))
 
 button_clear = TK.Button(frame, bg = "#6385F5", height = 3, width = 7,
-                        text="Clear", font = "Segoe",
+                        text="Clear", font = "Helvetica",
                         command = lambda: clear_text())
 
 
 button_file = TK.Button(frame, bg = "#6385F5", height = 3, width = 7,
-                        text="Cards", font = "Segoe",
+                        text="Cards", font = "Helvetica",
                         command = lambda: get_txt())
 
 button_tutorial = TK.Button(frame, bg = "#6385F5", height = 3, width = 7,
-                        text="Tutorial", font = "Segoe",
+                        text="Tutorial", font = "Helvetica",
                         command = lambda: get_tutorial())
 
 
