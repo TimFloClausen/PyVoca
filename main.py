@@ -33,7 +33,13 @@ def clear_text():
     Text_output.delete("1.0", "end")
 
 def get_txt():
-    
+
+    original_text = Text_input.get("1.0", "end-1c").splitlines()
+    translated_text = Text_output.get("1.0", "end-1c").splitlines()
+
+    with open("Output.txt", "w", encoding="utf-8") as text_file:
+        for i in range(len(original_text)):
+            text_file.write(f"{original_text[i]}\t{translated_text[i]}\n")
    
 
      
@@ -122,6 +128,7 @@ button_clear = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
 button_file = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
                         text="Cards", font = "Segoe",
                         command = lambda: get_txt())
+
 
 
 Text_input = TK.Text(window, bg = "#222630", fg = "#F1F3F9",

@@ -41,7 +41,7 @@ PyVoca is currently in development. Features will be implemented step by step.
 - [x] Add new words
 - [x] Edit existing words and translations
 - [x] Delete words
-- [ ] Organize words into vocabulary lists
+- [x] Organize words into vocabulary lists
 - [x] Select source and target languages
 
 ### Translation
@@ -52,10 +52,12 @@ PyVoca is currently in development. Features will be implemented step by step.
 - [x] Handle errors and invalid requests
 
 ### Export
-- [ ] Export vocabulary lists as `.txt` files
-- [ ] Make exports compatible with Quizlet's import format
+- [x] Export vocabulary lists as `.txt` files
+- [x] Make exports compatible with Quizlet's import format
 
 ## Sources / Tutorials Used
+
+### Here are some of the sources and tutorials I used for this project:**
 
 [Pythontutorial - Tkinter-Window](https://www.pythontutorial.net/tkinter/tkinter-window/)
 
