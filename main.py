@@ -1,4 +1,4 @@
-from googletrans import Translator
+from deep_translator import MyMemoryTranslator
 import tkinter as TK
 import asyncio
 
@@ -13,15 +13,7 @@ window .geometry("700x800")
 
 
 async def Take_input():
-    INPUT = Text_input.get("1.0", "end-1c")
-    print(INPUT)
-    translator = Translator()
-    translated = await translator.translate("hello world", src="en", dest="fr")
-    print(translated.__dict__)
-
-
-
-    
+    INPUT = Text_inp 
 language_options_1 = [
     "Select language",
     "to English",

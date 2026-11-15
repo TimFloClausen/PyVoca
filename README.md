@@ -45,7 +45,7 @@ PyVoca is currently in development. Features will be implemented step by step.
 - [ ] Select source and target languages
 
 ### Translation
-- [ ] Translate individual words using Googletrans
+- [ ] Translate individual words using MyMemoryTranslator
 - [ ] Translate multiple words at once
 - [ ] Display translations in the application
 - [ ] Allow users to manually edit translations
