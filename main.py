@@ -1,5 +1,6 @@
 from googletrans import Translator
 import tkinter as TK
+import asyncio
 
 
 
@@ -9,6 +10,15 @@ window.title("PyVoca")
 window.resizable(False, False)
 window .configure(background="#17191F")
 window .geometry("700x800")
+
+
+async def Take_input():
+    INPUT = Text_input.get("1.0", "end-1c")
+    print(INPUT)
+    translator = Translator()
+    translated = await translator.translate("hello world", src="en", dest="fr")
+    print(translated.__dict__)
+
 
 
     
@@ -38,7 +48,10 @@ clicked2 = TK.StringVar()
 clicked2.set("Select languagee")
 
 button_translate = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
-                             text="Translate", font = "Segoe")
+                            text="Translate", font = "Segoe",
+                            command = lambda: asyncio.run(Take_input()))
+
+
 button_file = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
                         text="Cards", font = "Segoe")
 
@@ -77,12 +90,3 @@ button_file.grid(row = 1, column = 1)
 
 
 window.mainloop()
-
-# Translator initialisieren
-translator = Translator()
-
-text = "Hello, my Name is Tim"
-
-# Übersetzen und ausgeben
-translated_text = translator.translate(text=text, src="auto", dest="fr").text
-print(translated_text)
