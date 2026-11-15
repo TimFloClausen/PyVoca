@@ -42,14 +42,14 @@ PyVoca is currently in development. Features will be implemented step by step.
 - [x] Edit existing words and translations
 - [x] Delete words
 - [ ] Organize words into vocabulary lists
-- [ ] Select source and target languages
+- [x] Select source and target languages
 
 ### Translation
-- [ ] Translate individual words using MyMemoryTranslator
-- [ ] Translate multiple words at once
-- [ ] Display translations in the application
-- [ ] Allow users to manually edit translations
-- [ ] Handle errors and invalid requests
+- [x] Translate individual words using MyMemoryTranslator
+- [x] Translate multiple words at once
+- [x] Display translations in the application
+- [x] Allow users to manually edit translations
+- [x] Handle errors and invalid requests
 
 ### Export
 - [ ] Export vocabulary lists as `.txt` files

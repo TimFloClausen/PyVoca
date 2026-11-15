@@ -9,7 +9,7 @@ window = TK.Tk()
 window.title("PyVoca")
 window.resizable(False, False)
 window .configure(background="#17191F")
-window .geometry("700x800")
+window .geometry("1200x800")
 
 
 
@@ -27,6 +27,19 @@ async def Take_input():
         translated_text = await asyncio.to_thread(translator.translate, INPUT)
         Text_output.delete("1.0", "end")
         Text_output.insert("1.0", translated_text)
+
+def clear_text():
+    Text_input.delete("1.0", "end")
+    Text_output.delete("1.0", "end")
+
+def get_txt():
+    
+   
+
+     
+
+
+
 
 def language_Selecttions1():
     source = "empty"
@@ -101,21 +114,32 @@ button_translate = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
                             text="Translate", font = "Segoe",
                             command = lambda: asyncio.run(Take_input()))
 
+button_clear = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
+                        text="Clear", font = "Segoe",
+                        command = lambda: clear_text())
+
 
 button_file = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
-                        text="Cards", font = "Segoe")
+                        text="Cards", font = "Segoe",
+                        command = lambda: get_txt())
+
 
 Text_input = TK.Text(window, bg = "#222630", fg = "#F1F3F9",
-                     height = 35, width = 25, font = "Segoe",)
+                     height = 40, width = 50, font = "Segoe",)
 Text_output = TK.Text(window, bg = "#222630", fg = "#F1F3F9",
-                      height = 35, width = 25, font = "Segoe",)
+                      height = 40, width = 50, font = "Segoe",)
 
 window.columnconfigure(0, weight = 1)
 window.columnconfigure(1, weight = 1)
 window.columnconfigure(2, weight = 1)
+
 window.rowconfigure(0, weight = 1)
 window.rowconfigure(1, weight = 1)
 window.rowconfigure(2, weight = 1)
+window.rowconfigure(3, weight = 1)
+window.rowconfigure(4, weight = 1)
+window.rowconfigure(5, weight = 1)
+
 
 
 
@@ -127,11 +151,12 @@ drop2 = TK.OptionMenu(window, clicked2, *language_options_2)
 drop2.grid(row = 0, column = 2)
 
 Text_input.grid(row = 1, column = 0)
-
 Text_output.grid(row = 1, column = 2)
 
-button_translate.grid(row = 0, column = 1)
-button_file.grid(row = 1, column = 1)
+button_translate.grid(row = 0, column = 1, pady=1)
+button_clear.grid(row = 1, column = 1, pady=1)
+button_file.grid(row = 3, column = 1, pady=1)
+
 
 
 
