@@ -67,5 +67,7 @@ PyVoca is currently in development. Features will be implemented step by step.
 
 [Pythonguis - Create Buttons in Tkinter](https://www.pythonguis.com/tutorials/create-buttons-in-tkinter/)
 
+[Deep translator’s Documentation](https://deep-translator.readthedocs.io/en/latest/)
+
 
 

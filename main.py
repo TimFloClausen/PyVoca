@@ -14,17 +14,19 @@ window .geometry("700x800")
 
 
 async def Take_input():
-    source = lambda: language_Selecttions1()
-    target = lambda: language_Selecttions2()
+    source = language_Selecttions1()
+    target = language_Selecttions2()
     INPUT = Text_input.get("1.0", "end-1c")
     print(INPUT)
-    if source or target == None:
-        print("Input Error: Please select both languages.")
+    if source == "empty" or target == "empty":
+        Text_output.delete("1.0", "end")
+        Text_output.insert("1.0", "Input Error:")
     else:
         
         translator = MyMemoryTranslator(source, target)
         translated_text = await asyncio.to_thread(translator.translate, INPUT)
-        print(translated_text)
+        Text_output.delete("1.0", "end")
+        Text_output.insert("1.0", translated_text)
 
 def language_Selecttions1():
     source = "empty"
@@ -42,8 +44,9 @@ def language_Selecttions1():
         elif clicked1.get() == "From French":
                 source = "french"
                 return source
-    else:
-        return None
+    else: 
+        source = "empty"
+        return source
         
 
 def language_Selecttions2():
@@ -63,7 +66,8 @@ def language_Selecttions2():
                 target = "french"
                 return target
     else:
-        return None
+        target = "empty"
+        return target
 
 
 
@@ -128,6 +132,7 @@ Text_output.grid(row = 1, column = 2)
 
 button_translate.grid(row = 0, column = 1)
 button_file.grid(row = 1, column = 1)
+
 
 
 
