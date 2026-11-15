@@ -33,14 +33,14 @@ PyVoca is currently in development. Features will be implemented step by step.
 
 ### GUI Development
 - [x] Create the main Tkinter window
-- [ ] Add a text input area
-- [ ] Add a translation button
-- [ ] Complete the basic GUI layout
+- [x] Add a text input area
+- [x] Add a translation button
+- [x] Complete the basic GUI layout
 
 ### Vocabulary Management
-- [ ] Add new words
-- [ ] Edit existing words and translations
-- [ ] Delete words
+- [x] Add new words
+- [x] Edit existing words and translations
+- [x] Delete words
 - [ ] Organize words into vocabulary lists
 - [ ] Select source and target languages
 
