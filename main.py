@@ -17,7 +17,6 @@ async def Take_input():
     source = language_Selecttions1()
     target = language_Selecttions2()
     INPUT = Text_input.get("1.0", "end-1c")
-    print(INPUT)
     if source == "empty" or target == "empty":
         Text_output.delete("1.0", "end")
         Text_output.insert("1.0", "Input Error:")
@@ -40,7 +39,39 @@ def get_txt():
     with open("Output.txt", "w", encoding="utf-8") as text_file:
         for i in range(len(original_text)):
             text_file.write(f"{original_text[i]}\t{translated_text[i]}\n")
-   
+
+def get_tutorial():
+    
+    tutorial_text = ("""
+    How to use PyVoca
+
+    Using PyVoca is really easy!
+    
+    1. Choose your source and target languages.
+    
+    2. Write the words you want to learn in your source language.
+    
+    3. Translate them using the Translate button.
+    
+    4. Edit the translations if necessary.
+    
+    5. Click on Cards to export your vocabulary into a .txt file.
+    
+    6. C/P the text from the .txt file into Quizlet's import section.
+    
+    7. Start learning with your flashcards!
+    
+    Note: The text in the source language should look like this:
+
+    Vocabulary 1
+    Vocabulary 2
+    Vocabulary 3
+    Vocabulary 4
+    Vocabulary 5
+                    """)
+    Text_input.delete("1.0", "end")
+    Text_input.insert("1.0",tutorial_text)
+    
 
      
 
@@ -110,24 +141,31 @@ language_options_2 = [
     "to English",
     "to Spanish",
     "to German",
-    "to French"
+    "to French"               
     ]
 
 clicked2 = TK.StringVar()
 clicked2.set("Select language")
 
-button_translate = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
+frame = TK.Frame(window, bg= "#17191F", width=200, height=500, bd=3,)
+frame.grid(row = 1, column = 1)
+
+button_translate = TK.Button(frame, bg = "#6385F5", height = 3, width = 7,
                             text="Translate", font = "Segoe",
                             command = lambda: asyncio.run(Take_input()))
 
-button_clear = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
+button_clear = TK.Button(frame, bg = "#6385F5", height = 3, width = 7,
                         text="Clear", font = "Segoe",
                         command = lambda: clear_text())
 
 
-button_file = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
+button_file = TK.Button(frame, bg = "#6385F5", height = 3, width = 7,
                         text="Cards", font = "Segoe",
                         command = lambda: get_txt())
+
+button_tutorial = TK.Button(frame, bg = "#6385F5", height = 3, width = 7,
+                        text="Tutorial", font = "Segoe",
+                        command = lambda: get_tutorial())
 
 
 
@@ -140,30 +178,28 @@ window.columnconfigure(0, weight = 1)
 window.columnconfigure(1, weight = 1)
 window.columnconfigure(2, weight = 1)
 
+
 window.rowconfigure(0, weight = 1)
 window.rowconfigure(1, weight = 1)
 window.rowconfigure(2, weight = 1)
 window.rowconfigure(3, weight = 1)
-window.rowconfigure(4, weight = 1)
-window.rowconfigure(5, weight = 1)
-
-
 
 
 drop1 = TK.OptionMenu(window, clicked1, *language_options_1)
-drop1.grid(row = 0, column = 0)
+drop1.grid(row = 0, column = 0, pady= 5)
 
 drop2 = TK.OptionMenu(window, clicked2, *language_options_2)
 
-drop2.grid(row = 0, column = 2)
+drop2.grid(row = 0, column = 2, pady= 5)
 
 Text_input.grid(row = 1, column = 0)
 Text_output.grid(row = 1, column = 2)
 
-button_translate.grid(row = 0, column = 1, pady=1)
-button_clear.grid(row = 1, column = 1, pady=1)
-button_file.grid(row = 3, column = 1, pady=1)
 
+button_tutorial.grid(row=0, column=0, pady=25)
+button_translate.grid(row=1, column=0, pady=25)
+button_clear.grid(row=2, column=0, pady=25)
+button_file.grid(row=3, column=0, pady=25)
 
 
 
