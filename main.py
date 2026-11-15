@@ -12,14 +12,68 @@ window .configure(background="#17191F")
 window .geometry("700x800")
 
 
+
 async def Take_input():
-    INPUT = Text_inp 
+    source = lambda: language_Selecttions1()
+    target = lambda: language_Selecttions2()
+    INPUT = Text_input.get("1.0", "end-1c")
+    print(INPUT)
+    if source or target == None:
+        print("Input Error: Please select both languages.")
+    else:
+        
+        translator = MyMemoryTranslator(source, target)
+        translated_text = await asyncio.to_thread(translator.translate, INPUT)
+        print(translated_text)
+
+def language_Selecttions1():
+    source = "empty"
+    if clicked1.get() != "Select language":
+
+        if clicked1.get() == "From English":
+            source = "english"
+            return source
+        elif clicked1.get() == "From Spanish":
+            source = "spanish"
+            return source
+        elif clicked1.get() == "From German":
+                source = "german"
+                return source
+        elif clicked1.get() == "From French":
+                source = "french"
+                return source
+    else:
+        return None
+        
+
+def language_Selecttions2():
+    target = "empty"
+    if clicked2.get() != "Select language":
+
+        if clicked2.get() == "to English":
+            target = "english"
+            return target
+        elif clicked2.get() == "to Spanish":
+            target = "spanish"
+            return target
+        elif clicked2.get() == "to German":
+                target = "german"
+                return target
+        elif clicked2.get() == "to French":
+                target = "french"
+                return target
+    else:
+        return None
+
+
+
+    
 language_options_1 = [
     "Select language",
-    "to English",
-    "to Spainish",
-    "to German",
-    "to France"
+    "From English",
+    "From Spanish",
+    "From German",
+    "From French"
     ]
 clicked1 = TK.StringVar()
 clicked1.set("Select language")
@@ -31,13 +85,13 @@ language_options_2 = [
     
     "Select language",
     "to English",
-    "to Spainish",
+    "to Spanish",
     "to German",
-    "to France"
+    "to French"
     ]
 
 clicked2 = TK.StringVar()
-clicked2.set("Select languagee")
+clicked2.set("Select language")
 
 button_translate = TK.Button(window, bg = "#6385F5", height = 3, width = 10,
                             text="Translate", font = "Segoe",
