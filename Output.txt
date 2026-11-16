@@ -1,6 +1,9 @@
-hallo	bonjour
-der Baum	l’arbre
-ich essen	je mange
-ich ass	je mangeai
-ich habe gegessen	j’ai mangé
-ich werde gegessen haben	j’aurai mangé
+Essen	Cibus
+Haus	Domus
+Kartoffel	Solanum tuberosum
+Schule	Schola
+Kind	Puer
+Baby	Infans
+Embrio	Embryo
+Hand	Manus
+Handy	Telephonicum mobile

@@ -12,7 +12,7 @@ window.resizable(False, False)
 window .configure(background="#17191F")
 icon = TK.PhotoImage(file="icon.png")
 window.iconphoto(True, icon)
-window .geometry("1200x800")
+window.geometry("1200x900")
 
 
 
@@ -201,9 +201,9 @@ button_tutorial = TK.Button(frame, bg = "#6385F5", height = 3, width = 7,
 
 
 Text_input = TK.Text(window, bg = "#222630", fg = "#F1F3F9",
-                     height = 40, width = 50, font = "Segoe",)
+                     height = 35, width = 55, font = "Segoe",)
 Text_output = TK.Text(window, bg = "#222630", fg = "#F1F3F9",
-                      height = 40, width = 50, font = "Segoe",)
+                      height = 35, width = 55, font = "Segoe",)
 
 window.columnconfigure(0, weight = 1)
 window.columnconfigure(1, weight = 1)
